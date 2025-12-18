@@ -17,7 +17,7 @@ public:
         cin >> marks;
     }
 
-    void display() {
+    void display() const {
         cout << "Roll: " << roll
              << ", Name: " << name
              << ", Marks: " << marks << endl;
@@ -56,7 +56,7 @@ int main() {
             }
         }
         else if (choice == 3) {
-            // Search Student  (STEP D6)
+            // Search Student
             int searchRoll;
             cout << "Enter roll number to search: ";
             cin >> searchRoll;
@@ -74,12 +74,33 @@ int main() {
                 cout << "Student not found.\n";
             }
         }
+        else if (choice == 4) {
+            // Delete Student  (STEP D7)
+            int deleteRoll;
+            cout << "Enter roll number to delete: ";
+            cin >> deleteRoll;
+
+            bool deleted = false;
+            for (auto it = students.begin(); it != students.end(); ++it) {
+                if (it->roll == deleteRoll) {
+                    students.erase(it);
+                    deleted = true;
+                    cout << "Student record deleted successfully.\n";
+                    break;
+                }
+            }
+
+            if (!deleted) {
+                cout << "Student not found.\n";
+            }
+        }
 
     } while (choice != 5);
 
     cout << "Exiting program.\n";
     return 0;
 }
+
 
 
 
