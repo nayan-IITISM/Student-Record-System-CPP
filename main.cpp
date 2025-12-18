@@ -1,31 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-class Student {
-public:
-    int roll;
-    string name;
-    float marks;
-
-    void input() {
-        cout << "Enter Roll Number: ";
-        cin >> roll;
-        cin.ignore();
-        cout << "Enter Name: ";
-        getline(cin, name);
-        cout << "Enter Marks: ";
-        cin >> marks;
-    }
-
-    void display() {
-        cout << "Roll: " << roll
-             << ", Name: " << name
-             << ", Marks: " << marks << endl;
-    }
-};
-
 int main() {
+    vector<Student> students;
+    int choice;
+
+    do {
+        cout << "\n1. Add Student";
+        cout << "\n2. Display All Students";
+        cout << "\n3. Search Student";
+        cout << "\n4. Delete Student";
+        cout << "\n5. Exit";
+        cout << "\nEnter choice: ";
+        cin >> choice;
+
+        if (choice == 5) {
+            cout << "Exiting program\n";
+        }
+    } while (choice != 5);
+
     return 0;
 }
+
 
  
