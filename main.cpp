@@ -46,7 +46,7 @@ int main() {
             cout << "Student added successfully.\n";
         }
         else if (choice == 2) {
-            // Display All Students  (STEP D5)
+            // Display All Students
             if (students.empty()) {
                 cout << "No records found.\n";
             } else {
@@ -55,12 +55,32 @@ int main() {
                 }
             }
         }
+        else if (choice == 3) {
+            // Search Student  (STEP D6)
+            int searchRoll;
+            cout << "Enter roll number to search: ";
+            cin >> searchRoll;
+
+            bool found = false;
+            for (const auto &s : students) {
+                if (s.roll == searchRoll) {
+                    s.display();
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                cout << "Student not found.\n";
+            }
+        }
 
     } while (choice != 5);
 
     cout << "Exiting program.\n";
     return 0;
 }
+
 
 
 
