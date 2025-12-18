@@ -1,31 +1,18 @@
-#include <bits/stdc++.h>
-using namespace std;
+# Student Record Management System (C++)
 
-class Student {
-public:
-    int roll;
-    string name;
-    float marks;
+## Description
+This is a console-based C++ application to manage student records.
 
-    void input() {
-        cout << "Enter Roll Number: ";
-        cin >> roll;
-        cin.ignore();
-        cout << "Enter Name: ";
-        getline(cin, name);
-        cout << "Enter Marks: ";
-        cin >> marks;
-    }
+## Features
+- Add student records
+- Display all students
+- Search student by roll number
+- Delete student record
 
-    void display() {
-        cout << "Roll: " << roll
-             << ", Name: " << name
-             << ", Marks: " << marks << endl;
-    }
-};
+## Technologies Used
+- C++
+- STL (vector)
 
-int main() {
-    return 0;
-}
-
+## Learning Outcome
+Practiced object-oriented programming and basic data structures.
 
