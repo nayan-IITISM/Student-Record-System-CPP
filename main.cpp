@@ -11,9 +11,12 @@ int main() {
         cout << "\nEnter choice: ";
         cin >> choice;
 
-        if (choice == 5) {
-            cout << "Exiting program\n";
-        }
+        if (choice == 1) {
+        Student s;
+        s.input();
+        students.push_back(s);
+        cout << "Student added successfully\n";
+    }
     } while (choice != 5);
 
     return 0;
